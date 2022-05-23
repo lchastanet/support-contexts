@@ -8,7 +8,9 @@ export const CurrentHousesContextProvider = ({ children }) => {
   const [housesToRent, setHousesToRent] = useState(housesToRentData)
 
   return (
-    <CurrentHousesContext.Provider value={{ housesToRent, setHousesToRent }}>
+    <CurrentHousesContext.Provider
+      value={{ housesToRent, setHousesToRent, housesToRentData }}
+    >
       {children}
     </CurrentHousesContext.Provider>
   )

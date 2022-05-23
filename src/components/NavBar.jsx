@@ -2,10 +2,8 @@ import { useContext } from "react"
 
 import CurrentHousesContext from "../contexts/housesContext"
 
-import housesToRentData from "../data/housesToRent"
-
 function NavBar() {
-  const { setHousesToRent } = useContext(CurrentHousesContext)
+  const { setHousesToRent, housesToRentData } = useContext(CurrentHousesContext)
 
   const handleChange = (e) => {
     const newList = housesToRentData.filter(
